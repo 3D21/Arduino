@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Ivan Pushkar",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 246.4,
+      "left": 178.4,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": 3.61,
+      "left": 326.83,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": -126.15, "left": 151.82, "attrs": {} },
+    { "type": "wokwi-ir-remote", "id": "remote1", "top": 38.4, "left": 576, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-38.4", "v-86.2", "h105.6" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-57.6", "v-76.5", "h134.4", "v-38.4" ] ],
+    [ "stepper1:B-", "uno:2", "green", [ "v57.6", "h-144.01", "v-249.6", "h-48" ] ],
+    [ "stepper1:B+", "uno:3", "green", [ "v48", "h-124.8", "v0", "h-57.6", "v-249.6" ] ],
+    [ "stepper1:A+", "uno:4", "green", [ "v38.4", "h-115.2", "v-240", "h-67.2", "v9.6" ] ],
+    [ "stepper1:A-", "uno:5", "green", [ "v28.8", "h-96", "v-240", "h-86.4", "v9.6" ] ],
+    [ "ir1:DAT", "uno:7", "green", [ "v0" ] ],
+    [ "ir1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ir1:VCC", "uno:5V", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

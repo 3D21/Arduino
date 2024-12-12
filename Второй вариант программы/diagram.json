@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 160.98, "left": -237.02, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "sw1",
+      "top": -158.66,
+      "left": -191.75,
+      "attrs": { "display": "steps", "arrow": "white", "gearRatio": "200:1023" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 197.2,
+      "left": -418.4,
+      "rotate": 270,
+      "attrs": { "travelLength": "30", "value": "1023" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -22.4,
+      "left": -522.4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "sw1:B-", "uno:2", "green", [ "v48.92", "h67.3" ] ],
+    [ "sw1:B+", "uno:3", "green", [ "v57.7", "h67.41" ] ],
+    [ "sw1:A+", "uno:4", "green", [ "v64.52", "h67.51" ] ],
+    [ "sw1:A-", "uno:5", "green", [ "v72.33", "h67.61" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v9.6", "h277.6" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v19.2", "h249.6" ] ],
+    [ "pot1:GND", "uno:GND.1", "black", [ "v-5.2", "h201.6" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-57.6", "v384", "h28.8" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-48", "v384.1", "h489.6" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-38.4", "v384.2", "h9.6" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-28.8", "v393.9", "h566.4", "v-96" ] ]
+  ],
+  "dependencies": { "chip-scope": "github:Dlloydev/Wokwi-Chip-Scope@1.0.7" }
+}
