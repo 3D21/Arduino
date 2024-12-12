@@ -1,3 +1,8 @@
+Вот ссылка на проект на сайте wokwi.com : https://wokwi.com/projects/417016961754658817
+
+![image](https://github.com/user-attachments/assets/5cbdd0e6-6bde-4698-89ab-db50912c5249)
+
+
 ProportionalControlAccelStepper.ino is a simulation of a 4-wire stepper motor using 
 a Slide Potentiometer and the [AccelStepper library](https://www.airspayce.com/mikem/arduino/AccelStepper/ProportionalControl_8pde-example.html)
 
